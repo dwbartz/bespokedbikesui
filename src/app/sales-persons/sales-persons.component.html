@@ -1,1 +1,28 @@
-<p>sales-persons works!</p>
+<h3>Sales People</h3>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Address</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Start Date</th>
+    <th scope="col">Termination Date</th>
+    <th scope="col">Manager</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let salesPerson of salesPeople">
+    <th scope="row">{{salesPerson.id}}</th>
+    <td>{{salesPerson.firstName}}</td>
+    <td>{{salesPerson.lastName}}</td>
+    <td>{{salesPerson.address}}</td>
+    <td>{{salesPerson.phone}}</td>
+    <td>{{salesPerson.startDate| date: 'mediumDate'}}</td>
+    <td>{{salesPerson.terminationDate| date: 'mediumDate'}}</td>
+    <td>{{salesPerson.manager}}</td>
+  </tr>
+  </tbody>
+</table>
