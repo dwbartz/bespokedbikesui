@@ -28,12 +28,16 @@
 
   <div class="form-group">
     <label for="startDate">Start Date</label>
-    <input class="form-control" id="startDate" type="date" [(ngModel)]="salesPerson.startDate">
+    <input class="form-control" id="startDate" type="date"
+           [ngModel]="salesPerson.startDate | date:'yyyy-MM-dd'"
+           (ngModelChange)="salesPerson.startDate = $event" >
   </div>
 
   <div class="form-group">
     <label for="terminationDate">Termination Date</label>
-    <input class="form-control" id="terminationDate" type="date" [(ngModel)]="salesPerson.terminationDate">
+    <input class="form-control" id="terminationDate" type="date"
+           [ngModel]="salesPerson.terminationDate | date:'yyyy-MM-dd'"
+           (ngModelChange)="salesPerson.terminationDate = $event" >
   </div>
 
   <button (click)="submit()" class="btn">Submit</button>

@@ -18,7 +18,9 @@
 
   <div class="form-group">
     <label for="salesDate">Sales Date</label>
-    <input class="form-control" id="salesDate" type="date" [(ngModel)]="sale.salesDate">
+    <input class="form-control" id="salesDate" type="date"
+           [ngModel]="sale.salesDate | date:'yyyy-MM-dd'"
+           (ngModelChange)="sale.salesDate = $event" >
   </div>
 
   <button (click)="submit()" class="btn">Submit</button>
