@@ -1,1 +1,22 @@
-<p>sales works!</p>
+<h3>Customers</h3>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Product</th>
+    <th scope="col">Sales Person</th>
+    <th scope="col">Customer</th>
+    <th scope="col">Sale Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let sale of sales">
+    <th scope="row">{{sale.id}}</th>
+    <td>{{sale.productId}}</td>
+    <td>{{sale.salesPersonId}}</td>
+    <td>{{sale.customerId}}</td>
+    <td>{{sale.salesDate| date: 'mediumDate'}}</td>
+  </tr>
+  </tbody>
+</table>
