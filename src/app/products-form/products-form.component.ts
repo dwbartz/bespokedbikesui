@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Product} from '../models/product';
+import {ProductsRepositoryService} from '../services/products-repository.service';
 
 @Component({
   selector: 'app-products-form',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsFormComponent implements OnInit {
 
-  constructor() { }
+  public product: Product;
+  private productsRepository: ProductsRepositoryService;
+
+  constructor(productsRepository: ProductsRepositoryService) {
+    this.productsRepository = productsRepository;
+  }
 
   ngOnInit() {
   }
 
+  public submit() {
+    if (this.product.id === 0) {
+      this.productsRepository.createProduct(this.product).subscribe();
+    } else {
+      this.productsRepository.updateProduct(this.product).subscribe();
+    }
+  }
 }

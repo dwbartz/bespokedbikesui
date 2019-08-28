@@ -11,6 +11,7 @@
     <th scope="col">Start Date</th>
     <th scope="col">Termination Date</th>
     <th scope="col">Manager</th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -23,6 +24,8 @@
     <td>{{salesPerson.startDate| date: 'mediumDate'}}</td>
     <td>{{salesPerson.terminationDate| date: 'mediumDate'}}</td>
     <td>{{salesPerson.manager}}</td>
+    <td><a [routerLink]="[salesPerson.id]">Edit</a></td>
   </tr>
   </tbody>
 </table>
+

@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {Sale} from '../models/sale';
+import {SalesPerson} from '../models/SalesPerson';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,13 @@ export class SalesRepositoryService {
     }
 
     return this.httpClient.get<Sale[]>(url.href);
+  }
+
+  public createSale(sale: Sale): Observable<Sale> {
+    return this.httpClient.post<Sale>(`${environment.urls.salesApiUri}`, sale);
+  }
+
+  public updateSale(sale: Sale): Observable<Sale> {
+    return this.httpClient.put<Sale>(`${environment.urls.salesApiUri}/${sale.id}`, sale);
   }
 }

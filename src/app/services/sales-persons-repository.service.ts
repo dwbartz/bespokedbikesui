@@ -17,4 +17,13 @@ export class SalesPersonsRepositoryService {
   public getSalesPersons(): Observable<SalesPerson[]> {
     return this.httpClient.get<SalesPerson[]>(`${environment.urls.salesPersonsApiUri}`);
   }
+
+  public createSalesPerson(salesPerson: SalesPerson): Observable<SalesPerson> {
+    return this.httpClient.post<SalesPerson>(`${environment.urls.salesPersonsApiUri}`, salesPerson);
+  }
+
+  public updateSalesPerson(salesPerson: SalesPerson): Observable<SalesPerson> {
+    return this.httpClient.put<SalesPerson>(`${environment.urls.salesPersonsApiUri}/${salesPerson.id}`, salesPerson);
+  }
+
 }

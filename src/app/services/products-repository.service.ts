@@ -17,4 +17,12 @@ export class ProductsRepositoryService {
   public getProducts(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(`${environment.urls.productsApiUri}`);
   }
+
+  public createProduct(product: Product): Observable<Product> {
+    return this.httpClient.post<Product>(`${environment.urls.productsApiUri}`, product);
+  }
+
+  public updateProduct(product: Product): Observable<Product> {
+    return this.httpClient.put<Product>(`${environment.urls.productsApiUri}/${product.id}`, product);
+  }
 }
