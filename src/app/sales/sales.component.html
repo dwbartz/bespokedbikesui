@@ -1,22 +1,27 @@
 <h3>Customers</h3>
 
+
 <table class="table">
   <thead>
   <tr>
     <th scope="col">#</th>
     <th scope="col">Product</th>
     <th scope="col">Sales Person</th>
+    <th scope="col">Sales Commission</th>
     <th scope="col">Customer</th>
     <th scope="col">Sale Date</th>
+    <th scope="col">Price</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let sale of sales">
     <th scope="row">{{sale.id}}</th>
-    <td>{{sale.productId}}</td>
-    <td>{{sale.salesPersonId}}</td>
-    <td>{{sale.customerId}}</td>
+    <td>{{sale.product.name}}</td>
+    <td>{{sale.salesPerson.firstName}} {{sale.salesPerson.lastName}}</td>
+    <td>{{sale.product.commissionPercentage * sale.product.salePrice | currency: 'USD'}}</td>
+    <td>{{sale.customer.firstName}} {{sale.customer.lastName}}</td>
     <td>{{sale.salesDate| date: 'mediumDate'}}</td>
+    <td>{{sale.product.salePrice | currency: 'USD'}}</td>
   </tr>
   </tbody>
 </table>
