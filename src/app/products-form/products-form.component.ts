@@ -33,7 +33,7 @@ export class ProductsFormComponent implements OnInit {
   }
 
   public submit() {
-    if (this.product.id === 0) {
+    if (!this.product.id) {
       this.productsRepository.createProduct(this.product).subscribe();
     } else {
       this.productsRepository.updateProduct(this.product).subscribe();

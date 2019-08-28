@@ -32,7 +32,7 @@ export class SalesPersonsFormComponent implements OnInit {
   }
 
   public submit() {
-    if (this.salesPerson.id === 0) {
+    if (!this.salesPerson.id) {
       this.salesPersonsRepository.createSalesPerson(this.salesPerson).subscribe();
     } else {
       this.salesPersonsRepository.updateSalesPerson(this.salesPerson).subscribe();
