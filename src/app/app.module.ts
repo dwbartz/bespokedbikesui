@@ -10,6 +10,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { SalesComponent } from './sales/sales.component';
 import { SalesPersonsComponent } from './sales-persons/sales-persons.component';
 import {HttpClientModule} from '@angular/common/http';
+import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,12 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    NgbDropdownModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

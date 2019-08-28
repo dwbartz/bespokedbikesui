@@ -1,1 +1,49 @@
-<p>reports works!</p>
+<h3>Sales Commission Report</h3>
+
+<div class="mx-auto btn-group" ngbDropdown>
+  <button type="button" class="mt-5 mb-5 btn btn-primary btn-lg dropdown-toggle btn-block" ngbDropdownToggle
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change Quarter
+  </button>
+
+  <div
+    ngbDropdownMenu aria-labelledby="dropdownMenu1">
+    <button *ngFor="let q of quarters" (click)="updateParams(year, q)"
+            class="dropdown-item">
+      {{q}}
+    </button>
+  </div>
+</div>
+
+
+<div class="mx-auto btn-group" ngbDropdown>
+  <button type="button" class="mt-5 mb-5 btn btn-primary btn-lg dropdown-toggle btn-block" ngbDropdownToggle
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change Year
+  </button>
+
+  <div
+  ngbDropdownMenu aria-labelledby="dropdownMenu1">
+  <button *ngFor="let y of years" (click)="updateParams(y, quarter)"
+          class="dropdown-item">
+    {{y}}
+  </button>
+</div>
+</div>
+
+
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Commission</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let commission of commissions">
+    <td>{{commission.salesPerson.firstName}}</td>
+    <td>{{commission.salesPerson.lastName}}</td>
+    <td>{{commission.commission}}</td>
+  </tr>
+  </tbody>
+</table>
