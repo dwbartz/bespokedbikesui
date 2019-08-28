@@ -14,7 +14,7 @@ export class SalesRepositoryService {
   ) {
   }
 
-  public getSales(): Observable<Sale[]> {
-    return this.httpClient.get<Sale[]>(`${environment.urls.salesApiUri}`);
+  public getSales(startDate: Date, endDate: Date): Observable<Sale[]> {
+    return this.httpClient.get<Sale[]>(`${environment.urls.salesApiUri}?startDate=${startDate}&endDate=${endDate}`);
   }
 }

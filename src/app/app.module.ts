@@ -11,6 +11,7 @@ import { SalesComponent } from './sales/sales.component';
 import { SalesPersonsComponent } from './sales-persons/sales-persons.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    FormsModule
   ],
   providers: [
   ],
