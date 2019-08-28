@@ -6,6 +6,9 @@ import {ProductsComponent} from './products/products.component';
 import {ReportsComponent} from './reports/reports.component';
 import {SalesComponent} from './sales/sales.component';
 import {SalesPersonsComponent} from './sales-persons/sales-persons.component';
+import {SalesPersonsFormComponent} from './sales-persons-form/sales-persons-form.component';
+import {SalesFormComponent} from './sales-form/sales-form.component';
+import {ProductsFormComponent} from './products-form/products-form.component';
 
 
 const routes: Routes = [
@@ -32,6 +35,18 @@ const routes: Routes = [
   {
     path: 'sales-persons',
     component: SalesPersonsComponent
+  },
+  {
+    path: 'sales-persons/:salesPersonId',
+    component: SalesPersonsFormComponent
+  },
+  {
+    path: 'products/:productId',
+    component: ProductsFormComponent
+  },
+  {
+    path: 'sales/:saleId',
+    component: SalesFormComponent
   }
 ];
 
