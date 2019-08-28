@@ -14,10 +14,9 @@ export class ReportsComponent implements OnInit {
   public quarter = 1;
   public quarters = [1, 2, 3, 4];
   public commissions: SalesPersonCommission[] = [];
-  private reportsRepository: ReportsRepositoryService;
 
-  constructor(salesPersonsRepository: ReportsRepositoryService) {
-    this.reportsRepository = salesPersonsRepository;
+  constructor(
+    private reportsRepository: ReportsRepositoryService) {
   }
 
   ngOnInit() {

@@ -10,11 +10,9 @@ import {SalesPerson} from '../models/SalesPerson';
 export class SalesPersonsComponent implements OnInit {
 
   public salesPeople: SalesPerson[] = [];
-  private salesPersonsRepository: SalesPersonsRepositoryService;
 
-  constructor(salesPersonsRepository: SalesPersonsRepositoryService) {
-    this.salesPersonsRepository = salesPersonsRepository;
-
+  constructor(
+    private salesPersonsRepository: SalesPersonsRepositoryService) {
   }
 
   ngOnInit() {

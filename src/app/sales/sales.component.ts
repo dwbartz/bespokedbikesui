@@ -12,10 +12,9 @@ export class SalesComponent implements OnInit {
   public startDate: Date;
   public endDate: Date;
   public sales: Sale[] = [];
-  private salesRepository: SalesRepositoryService;
 
-  constructor(salesRepository: SalesRepositoryService) {
-    this.salesRepository = salesRepository;
+  constructor(
+    private salesRepository: SalesRepositoryService) {
   }
 
   ngOnInit() {

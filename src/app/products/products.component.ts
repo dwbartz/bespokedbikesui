@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductsRepositoryService} from '../services/products-repository.service';
 import {Product} from '../models/product';
 
@@ -10,10 +10,9 @@ import {Product} from '../models/product';
 export class ProductsComponent implements OnInit {
 
   public products: Product[] = [];
-  private productsRepository: ProductsRepositoryService;
 
-  constructor(productsRepository: ProductsRepositoryService) {
-    this.productsRepository = productsRepository;
+  constructor(
+    private productsRepository: ProductsRepositoryService) {
   }
 
   ngOnInit() {
