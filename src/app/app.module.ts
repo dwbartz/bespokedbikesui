@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SalesComponent } from './sales/sales.component';
 import { SalesPersonsComponent } from './sales-persons/sales-persons.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SalesPersonsComponent } from './sales-persons/sales-persons.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
