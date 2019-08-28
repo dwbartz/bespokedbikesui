@@ -22,7 +22,7 @@ export class SalesRepositoryService {
     }
 
     if (endDate) {
-      url.searchParams.append('startDate', endDate.toDateString());
+      url.searchParams.append('endDate', endDate.toDateString());
     }
 
     return this.httpClient.get<Sale[]>(url.href);
