@@ -11,6 +11,7 @@
     <th scope="col">Sale Price</th>
     <th scope="col">Quantity Available</th>
     <th scope="col">Commission</th>
+    <th scope="col"></th>
   </tr>
   </thead>
   <tbody>
@@ -23,6 +24,7 @@
     <th scope="row">{{product.salePrice|currency:'USD' }}</th>
     <th scope="row">{{product.quantityAvailable}}</th>
     <th scope="row">{{product.commissionPercentage|percent}}</th>
+    <td><a [routerLink]="[product.id]">Edit</a></td>
   </tr>
   </tbody>
 </table>
