@@ -23,12 +23,12 @@ export class SalesComponent implements OnInit {
   }
 
   setStartDate($event: NgbDate) {
-    this.startDate = new Date($event.year, $event.month, $event.day);
+    this.startDate = new Date($event.year, $event.month - 1, $event.day);
     this.getData();
   }
 
   setEndDate($event: NgbDate) {
-    this.endDate = new Date($event.year, $event.month, $event.day);
+    this.endDate = new Date($event.year, $event.month - 1, $event.day);
     this.getData();
   }
 
