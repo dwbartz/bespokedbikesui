@@ -1,1 +1,23 @@
-<p>sales-form works!</p>
+<div>
+  <div class="form-group">
+    <label for="customerId">Customer Id</label>
+    <input class="form-control" id="customerId" type="text" [(ngModel)]="sale.customerId">
+  </div>
+
+  <div class="form-group">
+    <label for="productId">Product Id</label>
+    <input class="form-control" id="productId" type="text" [(ngModel)]="sale.productId">
+  </div>
+
+  <div class="form-group">
+    <label for="salesPersonId">Sales Person Id</label>
+    <input class="form-control" id="salesPersonId" type="text" [(ngModel)]="sale.salesPersonId">
+  </div>
+
+  <div class="form-group">
+    <label for="salesDate">Sales Date</label>
+    <input class="form-control" id="salesDate" type="date" [(ngModel)]="sale.salesDate">
+  </div>
+
+  <button (click)="submit()" class="btn">Submit</button>
+</div>
