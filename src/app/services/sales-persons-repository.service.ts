@@ -18,6 +18,10 @@ export class SalesPersonsRepositoryService {
     return this.httpClient.get<SalesPerson[]>(`${environment.urls.salesPersonsApiUri}`);
   }
 
+  public getSalesPerson(id: number): Observable<SalesPerson> {
+    return this.httpClient.get<SalesPerson>(`${environment.urls.salesPersonsApiUri}/${id}`);
+  }
+
   public createSalesPerson(salesPerson: SalesPerson): Observable<SalesPerson> {
     return this.httpClient.post<SalesPerson>(`${environment.urls.salesPersonsApiUri}`, salesPerson);
   }

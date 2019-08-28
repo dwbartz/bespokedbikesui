@@ -18,6 +18,10 @@ export class ProductsRepositoryService {
     return this.httpClient.get<Product[]>(`${environment.urls.productsApiUri}`);
   }
 
+  public getProduct(id: number): Observable<Product> {
+    return this.httpClient.get<Product>(`${environment.urls.productsApiUri}/${id}`);
+  }
+
   public createProduct(product: Product): Observable<Product> {
     return this.httpClient.post<Product>(`${environment.urls.productsApiUri}`, product);
   }

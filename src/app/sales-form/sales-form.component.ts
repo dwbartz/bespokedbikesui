@@ -16,13 +16,12 @@ export class SalesFormComponent implements OnInit {
     private salesRepository: SalesRepositoryService,
     private route: ActivatedRoute,
   ) {
-    this.salesRepository = salesRepository;
   }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      if (params['saleId'] && params['saleId'] > 0) {
-        this.getSale(params['saleId']);
+      if (params.saleId && params.saleId > 0) {
+        this.getSale(params.saleId);
       } else {
         this.sale = new Sale();
       }
