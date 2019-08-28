@@ -6,19 +6,19 @@
     <th scope="col">#</th>
     <th scope="col">First Name</th>
     <th scope="col">Last Name</th>
-    <th scope="col">Address</th>
-    <th scope="col">Phone</th>
+    <th scope="col">address</th>
+    <th scope="col">phone</th>
     <th scope="col">Start Date</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let customer of customers">
-    <th scope="row">{{customer.Id}}</th>
-    <td>{{customer.FirstName}}</td>
-    <td>{{customer.LastName}}</td>
-    <td>{{customer.Address}}</td>
-    <td>{{customer.Phone}}</td>
-    <td>{{customer.StartDate}}</td>
+    <th scope="row">{{customer.id}}</th>
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.lastName}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.startDate}}</td>
   </tr>
   </tbody>
 </table>
