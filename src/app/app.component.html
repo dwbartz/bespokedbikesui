@@ -5,13 +5,19 @@
   </h1>
 </div>
 
-<ul>
-  <li><a routerLink="/customers">Customers</a></li>
-  <li><a routerLink="/discounts">Discounts</a></li>
-  <li><a routerLink="/products">Products</a></li>
-  <li><a routerLink="/reports">Reports</a></li>
-  <li><a routerLink="/sales">Sales</a></li>
-  <li><a routerLink="/sales-persons">Sales Persons</a></li>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/customers" [routerLinkActive]="['active']">Customers</a></li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/discounts" [routerLinkActive]="['active']">Discounts</a></li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/products" [routerLinkActive]="['active']">Products</a></li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/reports" [routerLinkActive]="['active']">Reports</a></li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/sales" [routerLinkActive]="['active']">Sales</a></li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/sales-persons" [routerLinkActive]="['active']">Sales Persons</a></li>
 </ul>
 
 <router-outlet></router-outlet>
