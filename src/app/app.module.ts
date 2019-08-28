@@ -12,9 +12,9 @@ import { SalesPersonsComponent } from './sales-persons/sales-persons.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
-import { SalespersonsFormComponent } from './salespersons-form/salespersons-form.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { SalesFormComponent } from './sales-form/sales-form.component';
+import { SalesPersonsFormComponent } from './sales-persons-form/sales-persons-form.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +25,9 @@ import { SalesFormComponent } from './sales-form/sales-form.component';
     ReportsComponent,
     SalesComponent,
     SalesPersonsComponent,
-    SalespersonsFormComponent,
     ProductFormComponent,
     SalesFormComponent,
+    SalesPersonsFormComponent,
   ],
   imports: [
     BrowserModule,
