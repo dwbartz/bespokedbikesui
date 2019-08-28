@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Discount} from './discount';
+import {DiscountsRepositoryService} from './discounts-repository.service';
 
 @Component({
   selector: 'app-discounts',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscountsComponent implements OnInit {
 
-  constructor() { }
+  public discounts: Discount[];
+  private discountsRepository: DiscountsRepositoryService;
+
+  constructor(discountsRepository: DiscountsRepositoryService) {
+    this.discountsRepository = discountsRepository;
+  }
 
   ngOnInit() {
+    this.discountsRepository.getDiscounts().subscribe(discounts => this.discounts = discounts);
   }
 
 }
