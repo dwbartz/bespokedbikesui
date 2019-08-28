@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ReportsRepositoryService} from './reports-repository.service';
-import {SalesPersonCommission} from './salesPersonCommission';
+import {ReportsRepositoryService} from '../services/reports-repository.service';
+import {SalesPersonCommission} from '../models/salesPersonCommission';
 
 @Component({
   selector: 'app-reports',

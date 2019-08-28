@@ -1,4 +1,4 @@
-import {SalesPerson} from '../sales-persons/SalesPerson';
+import {SalesPerson} from './SalesPerson';
 
 export class SalesPersonCommission {
   public salesPerson: SalesPerson;

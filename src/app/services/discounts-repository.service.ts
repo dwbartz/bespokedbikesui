@@ -2,20 +2,19 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
-import {Customer} from './customer';
+import {Discount} from '../models/discount';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomersRepositoryService {
+export class DiscountsRepositoryService {
 
   constructor(
     private httpClient: HttpClient
   ) {
   }
 
-  public getCustomers(): Observable<Customer[]> {
-    return this.httpClient.get<Customer[]>(`${environment.urls.customersApiUri}`);
+  public getDiscounts(): Observable<Discount[]> {
+    return this.httpClient.get<Discount[]>(`${environment.urls.discountsApiUri}`);
   }
 }
-

@@ -1,6 +1,6 @@
-import {SalesPerson} from '../sales-persons/SalesPerson';
-import {Customer} from '../customers/customer';
-import {Product} from '../products/product';
+import {SalesPerson} from './SalesPerson';
+import {Customer} from './customer';
+import {Product} from './product';
 
 export class Sale {
   public id: number;

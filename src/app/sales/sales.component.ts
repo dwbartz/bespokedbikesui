@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {SalesRepositoryService} from './sales-repository.service';
-import {Sale} from './sale';
+import {SalesRepositoryService} from '../services/sales-repository.service';
+import {Sale} from '../models/sale';
 import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
