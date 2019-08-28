@@ -6,9 +6,9 @@
     <div class="form-group">
       <div class="input-group">
         <input class="form-control" placeholder="yyyy-mm-dd"
-               name="dp" [(ngModel)]="startDate" ngbDatepicker #d="ngbDatepicker">
+               name="dp" (dateSelect)="setStartDate($event)" ngbDatepicker #start="ngbDatepicker">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+          <button class="btn btn-outline-secondary" (click)="start.toggle()" type="button">
             <i class="far fa-calendar-alt"></i>
           </button>
         </div>
@@ -23,9 +23,9 @@
     <div class="form-group">
       <div class="input-group">
         <input class="form-control" placeholder="yyyy-mm-dd"
-               name="dp" [(ngModel)]="endDate" ngbDatepicker #d="ngbDatepicker">
+               name="dp" (dateSelect)="setEndDate($event)" ngbDatepicker #end="ngbDatepicker">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+          <button class="btn btn-outline-secondary" (click)="end.toggle()" type="button">
             <i class="far fa-calendar-alt"></i>
           </button>
         </div>
